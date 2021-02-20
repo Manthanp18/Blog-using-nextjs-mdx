@@ -8,14 +8,14 @@ import { getAllPosts } from '../src/getAllPostPreviews'
 const siteUrl = 'https://blog.knowuser.com'
 
 const feed = new Feed({
-  title: 'Tailwind CSS Blog',
-  description: 'All the latest Tailwind CSS news, straight from the team.',
+  title: 'Knowuser Blog',
+  description: 'All the latest Knowuser news, straight from the team.',
   id: siteUrl,
   link: siteUrl,
   language: 'en',
   image: `${siteUrl}/favicon-32x32.png`,
   favicon: `${siteUrl}/favicon.ico`,
-  copyright: `All rights reserved ${new Date().getFullYear()}, Tailwind Labs`,
+  copyright: `All rights reserved ${new Date().getFullYear()}, Knowuser`,
   feedLinks: {
     rss: `${siteUrl}/feed.xml`,
     json: `${siteUrl}/feed.json`,
@@ -36,7 +36,7 @@ getAllPosts().forEach(({ link, module: { meta, default: Content } }) => {
   const html = ReactDOMServer.renderToStaticMarkup(mdx)
   const postText = `<p><em>(The post <a href="${siteUrl + link}">${
     meta.title
-  }</a> appeared first on <a href="${siteUrl}">Tailwind CSS Blog</a>.)</em></p>`
+  }</a> appeared first on <a href="${siteUrl}">Knowuser Blog</a>.)</em></p>`
   feed.addItem({
     title: meta.title,
     id: meta.title,

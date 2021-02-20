@@ -1,9 +1,9 @@
-import Head from 'next/head'
 import PageTitle from '@/components/PageTitle'
-import tinytime from 'tinytime'
+import { MDXProvider } from '@mdx-js/react'
+import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { MDXProvider } from '@mdx-js/react'
+import tinytime from 'tinytime'
 
 export const mdxComponents = {
   pre: ({ className, ...props }) => (
@@ -25,16 +25,16 @@ export default function Post({ meta, children, posts }) {
   return (
     <article className="xl:divide-y xl:divide-gray-200">
       <Head>
-        <title>{meta.title} – Tailwind CSS</title>
+        <title>{meta.title} – Knowuser</title>
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@tailwindcss" />
         <meta name="twitter:creator" content="@tailwindcss" />
-        <meta name="twitter:title" content={`${meta.title} – Tailwind CSS`} />
+        <meta name="twitter:title" content={`${meta.title} – Knowuser`} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={`https://blog.tailwindcss.com${meta.image}`} />
         <meta property="og:url" content={`https://blog.tailwindcss.com${router.pathname}`} />
         <meta property="og:type" content="article" />
-        <meta property="og:title" content={`${meta.title} – Tailwind CSS`} />
+        <meta property="og:title" content={`${meta.title} – Knowuser`} />
         <meta property="og:description" content={meta.description} />
         <meta property="og:image" content={`https://blog.tailwindcss.com${meta.image}`} />
         <meta name="description" content={meta.description}></meta>
