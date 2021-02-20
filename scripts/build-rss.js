@@ -1,12 +1,11 @@
-import fs from 'fs'
-import ReactDOMServer from 'react-dom/server'
 import { MDXProvider } from '@mdx-js/react'
 import { Feed } from 'feed'
-
+import fs from 'fs'
+import ReactDOMServer from 'react-dom/server'
 import { mdxComponents } from '../src/components/Post'
 import { getAllPosts } from '../src/getAllPostPreviews'
 
-const siteUrl = 'https://blog.tailwindcss.com'
+const siteUrl = 'https://blog.knowuser.com'
 
 const feed = new Feed({
   title: 'Tailwind CSS Blog',
@@ -23,8 +22,8 @@ const feed = new Feed({
     atom: `${siteUrl}/atom.xml`,
   },
   author: {
-    name: 'Adam Wathan',
-    link: 'https://twitter.com/@adamwathan',
+    name: 'Tirth Gajjar',
+    link: 'https://twitter.com/@tirthgajjar4',
   },
 })
 
