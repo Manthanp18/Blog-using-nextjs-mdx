@@ -107,6 +107,10 @@ module.exports = withBundleAnalyzer({
     if (!options.dev && !options.isServer) {
       const originalEntry = config.entry
 
+      config.node = {
+        fs: 'empty',
+      }
+
       config.entry = async () => {
         const entries = { ...(await originalEntry()) }
         entries['./scripts/build-rss.js'] = './scripts/build-rss.js'
