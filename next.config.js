@@ -104,7 +104,7 @@ module.exports = withBundleAnalyzer({
       ],
     })
 
-    if (!options.dev && options.isServer) {
+    if (!options.dev && !options.isServer) {
       const originalEntry = config.entry
 
       config.entry = async () => {
