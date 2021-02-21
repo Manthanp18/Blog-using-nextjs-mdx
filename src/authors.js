@@ -1,35 +1,21 @@
-import adamwathanAvatar from './img/adamwathan.jpg'
-import bradlcAvatar from './img/bradlc.jpg'
-import steveschogerAvatar from './img/steveschoger.jpg'
-import robinmalfaitAvatar from './img/robinmalfait.jpg'
-import simonswissAvatar from './img/simonswiss.jpg'
+import ketulPAvatar from './img/ketulP.jpg'
+import shreyasCAvatar from './img/shreyasC.jpg'
+import tirthGAvatar from './img/tirthG.jpg'
 
-export const adamwathan = {
-  name: 'Adam Wathan',
-  twitter: 'adamwathan',
-  avatar: adamwathanAvatar,
+export const tirthG = {
+  name: 'Tirth Gajjar',
+  twitter: 'tirthgajjar4',
+  avatar: tirthGAvatar,
 }
 
-export const bradlc = {
-  name: 'Brad Cornes',
-  twitter: 'bradlc',
-  avatar: bradlcAvatar,
+export const ketulP = {
+  name: 'Ketul Patel',
+  twitter: 'ketulP',
+  avatar: ketulPAvatar,
 }
 
-export const steveschoger = {
-  name: 'Steve Schoger',
-  twitter: 'steveschoger',
-  avatar: steveschogerAvatar,
-}
-
-export const robinmalfait = {
-  name: 'Robin Malfait',
-  twitter: 'malfaitrobin',
-  avatar: robinmalfaitAvatar,
-}
-
-export const simonswiss = {
-  name: 'Simon Vrachliotis',
-  twitter: 'simonswiss',
-  avatar: simonswissAvatar,
+export const shreyasC = {
+  name: 'Shreyas Chaudhary',
+  twitter: 'shreyasC',
+  avatar: shreyasCAvatar,
 }
