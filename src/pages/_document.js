@@ -6,7 +6,7 @@ class InlineStylesHead extends Head {
   getCssLinks() {
     return this.__getInlineStyles()
   }
-
+  
   __getInlineStyles() {
     const { assetPrefix, files } = this.context._documentProps
     if (!files || files.length === 0) return null

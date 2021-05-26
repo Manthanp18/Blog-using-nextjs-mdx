@@ -28,11 +28,13 @@ const feed = new Feed({
 })
 
 getAllPosts().forEach(({ link, module: { meta, default: Content } }) => {
+ 
   const mdx = (
     <MDXProvider components={mdxComponents}>
       <Content />
     </MDXProvider>
   )
+  
   const html = ReactDOMServer.renderToStaticMarkup(mdx)
   const postText = `<p><em>(The post <a href="${siteUrl + link}">${
     meta.title
@@ -69,3 +71,8 @@ getAllPosts().forEach(({ link, module: { meta, default: Content } }) => {
 fs.writeFileSync('./out/feed.xml', feed.rss2())
 fs.writeFileSync('./out/atom.xml', feed.atom1())
 fs.writeFileSync('./out/feed.json', feed.json1())
+
+
+// console.log(feed.rss2())
+// console.log(feed.json1());
+// // Output: JSON Feed 1.0
