@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import tinytime from 'tinytime'
+import DisqusComments from '@/components/DisqusComments'
 
 export const mdxComponents = {
   pre: ({ className, ...props }) => (
@@ -85,6 +86,9 @@ export default function Post({ meta, children, posts }) {
         <div className="divide-y divide-gray-200 xl:pb-0 xl:col-span-3 xl:row-span-2">
           <div className="prose max-w-none pt-10 pb-8">
             <MDXProvider components={mdxComponents}>{children}</MDXProvider>
+          </div>
+          <div>
+          <DisqusComments meta={meta} posts={posts}/>
           </div>
           {meta.footer && (
             <div className="pt-6 pb-16" dangerouslySetInnerHTML={{ __html: meta.footer }} />
