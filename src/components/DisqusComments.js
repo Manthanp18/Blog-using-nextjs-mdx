@@ -2,7 +2,7 @@ import {DiscussionEmbed} from "disqus-react"
 // import { useRouter } from 'next/router'
 
 const DisqusComments = ({ meta, posts}) => {
-
+  console.dir(meta);
   // const router = useRouter()
   const disqusShortname = "knowuser"
   const disqusConfig = {
