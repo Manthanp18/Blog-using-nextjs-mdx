@@ -1,15 +1,18 @@
 import {DiscussionEmbed} from "disqus-react"
-// import { useRouter } from 'next/router'
+import { useRouter } from 'next/router'
 
 const DisqusComments = ({ meta, posts}) => {
-
-  // const router = useRouter()
+console.log(meta)
+console.log(posts)
+  const router = useRouter()
   const disqusShortname = "knowuser"
   const disqusConfig = {
-    url: `localhost:3000/`,
-    identifier: meta.id, // Single post id
+    url: `localhost:3000/${router.pathname}`,
+    identifier: router.pathname, // Single post id
     title: meta.title // Single post title
+
   }
+  console.log(router)
   return (
     <div>
       <DiscussionEmbed

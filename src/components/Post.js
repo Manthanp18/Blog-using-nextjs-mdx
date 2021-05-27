@@ -22,6 +22,7 @@ export default function Post({ meta, children, posts }) {
   const postIndex = posts.findIndex((post) => post.link === router.pathname)
   const previous = posts[postIndex + 1]
   const next = posts[postIndex - 1]
+  
   return (
     <article className="xl:divide-y xl:divide-gray-200">
       <Head>
